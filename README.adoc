@@ -71,7 +71,6 @@ See:
   ** Autoselect line based on context/position
 
 ### Screenshots
-
 image::docs/readme-screenshot-presenter.png[width=640]
 image::docs/readme-screenshot-controller.png[width=640]
 image::docs/readme-screenshot-settings.png[width=640]
