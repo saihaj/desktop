@@ -1,0 +1,141 @@
+:repo: desktop
+:idprefix:
+:hide-uri-scheme:
+:numbered:
+:max-width: 900px
+:icons: font
+:toc: macro
+:toclevels: 4
+ifdef::env-github,env-browser[:outfilesuffix: .asciidoc]
+ifdef::env-github[]
+:note-caption: :information_source:
+:tip-caption: :bulb:
+:important-caption: :fire:
+:caution-caption: :warning:
+:warning-caption: :no_entry:
+endif::[]
+
+# ਸ਼ਬਦ ਓਐਸ ਡੈਸਕਟਾਪ ਲਈ ਯੋਗਦਾਨ
+
+ਸ਼ਬਦ ਓਐਸ ਪ੍ਰੋਜੈਕਟਾਂ ਵਿਚ ਦਿਲਚਸਪੀ ਅਤੇ ਹਿੱਸਾ ਲੈਣ ਲਈ ਤੁਹਾਡਾ ਧੰਨਵਾਦ!
+
+ਕੋਡ ਲਿਖਣ ਜਾਂ ਪਰੋਗਰਾਮਾਂ ਤੋਂ ਪਰੇ, ਤੁਹਾਡੇ ਯੋਗਦਾਨ ਕਰਨ ਲਈ ਬਹੁਤ ਸਾਰੇ ਤਰੀਕੇ ਹਨ ਜਿਵੇਂ ਬੱਗ ਨੂੰ ਲਾਗ ਕਰਨਾ, ਮੁੱਦਿਆਂ ਦੀ ਰਿਪੋਰਟ ਕਰਨਾ ਅਤੇ ਸੁਝਾਅ ਤਿਆਰ ਕਰਨਾ । ਇਹ ਸਭ ਸਾਡੇ link:https://github.com/ShabadOS/{repo}/issues/new[ਮੁੱਦਾ ਟਰੈਕਰ] ਦੇ ਜ਼ਰੀਏ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ । link:README.adoc#Contributing[ਯੋਗਦਾਨ] ਪਾਉਣ ਦੇ ਹੋਰ ਤਰੀਕਿਆਂ ਲਈ ਸਾਡਾ ਰੀਡਮੀ  ਦਸਤਾਵੇਜ਼ ਵੇਖੋ ਜਾਂ ਸਾਨੂੰ link:README.adoc#Feedback[ਸਲਾਹ] ਦਿਓ ।
+
+
+ਇਹ ਦਸਤਾਵੇਜ਼ ਡਿਵੈਲਪਰਾਂ ਜਾਂ ਪ੍ਰੋਗਰਾਮਰਾਂ ਲਈ ਹੈ ਜੋ ਸਿੱਧਾ ਸ਼ਬਦ ਓਐਸ ਡੈਸਕਟਾਪ ਦੇ ਸਰੋਤ ਕੋਡ ਵਿੱਚ ਯੋਗਦਾਨ ਪਾਉਣਾ ਚਾਹੁੰਦੇ ਹਨ ।
+
+toc::[id="toc"]
+
+## ਆਓ ਸ਼ੁਰੂ ਕਰੀਏ
+
+ਜੇ ਤੁਸੀਂ ਚੰਗੀ ਤਰ੍ਹਾਂ ਸਮਝਣਾ ਚਾਹੁੰਦੇ ਹੋ ਕਿ ਸ਼ਬਦ ਓਐਸ ਕਿਵੇਂ ਕੰਮ ਕਰਦਾ ਹੈ ਜਾਂ ਕਿਸੇ ਮੁੱਦੇ ਨੂੰ ਡੀਬੱਗ ਕਰਨਾ ਚਾਹੁੰਦਾ ਹੈ: ਸਰੋਤ ਪ੍ਰਾਪਤ ਕਰੋ, ਇਸ ਨੂੰ ਬਣਾਓ ਅਤੇ ਇਸਨੂੰ ਸਥਾਨਕ ਤੌਰ 'ਤੇ ਚਲਾਓ ।
+
+### ਜਰੂਰੀ ਹੈ
+
+ਲੋੜੀਂਦੇ ਟੂਲ ਡਾਨਲੋਡ ਕਰਨ ਲਈ, ਰਿਪੋਜ਼ਟਰੀ ਨੂੰ ਕਲੋਨ ਕਰੋ ਅਤੇ ਨਿਰਭਰਤਾ ਸਥਾਪਤ ਕਰੋ, ਤੁਹਾਨੂੰ ਨੈਟਵਰਕ ਐਕਸੈਸ ਦੀ ਜ਼ਰੂਰਤ ਹੋਏਗੀ ।
+
+You'll need the following:
+
+* https://git-scm.com/[ਗਿਟ]
+* https://nodejs.org/en/[ਨੋਡ ਜੇ ਐਸ], x64, version `>= 12.x`
+
+ਇਸ ਵੇਲੇ ਅਸੀਂ ਪੂਰਵ-ਕੰਪਾਈਲਡ ਬਾਈਨਰੀਜ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹਾਂ । ਜੇ ਸਾਨੂੰ ਭਵਿੱਖ ਵਿੱਚ ਦੇਸੀ ਨੋਡ ਮੋਡੀ ਮੋਡੂਲਸ ਕੰਪਾਇਲ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੈ, ਤਾਂ ਅਸੀਂ ਹੇਠ ਲਿਖੀਆਂ ਜ਼ਰੂਰਤਾਂ ਨੂੰ ਸ਼ਾਮਲ ਕਰਾਂਗੇ । ਸ਼ਬਦ ਓਐਸ ਡੈਸਕਟਾਪ ਬਣਾਉਣ ਲਈ, ਚਲਾਉਣ ਲਈ, ਪੈਕੇਜ ਬਣਾਉਣ ਜਾਂ ਵੰਡਣ ਲਈ ਹੇਠ ਲਿਖੀਆਂ ਹਦਾਇਤਾਂ ਦੀ ਲੋੜ ਨਹੀਂ ਹੈ ।
+
+.ਕੰਪਾਈਲ ਟੂਲ ਚੇਨ ਲਈ ਜ਼ਰੂਰੀ ਸ਼ਰਤਾਂ ਵੇਖੋ
+[%collapsible]
+====
+* https://www.python.org/downloads/release/python-2715/[ਪਾਈਥਨ],
+ਘੱਟੋ ਘੱਟ ਵਰਜਨ ੨.੭ (ਵਰਜਨ ੩ ਸਹਿਯੋਗੀ ਨਹੀਂ ਹੈ)
++
+NOTE: ਵਿੰਡੋਜ਼ ਉਪਭੋਗਤਾ ਲਈ ਪਾਈਥਨ 2.7 `ਵਿੰਡੋਜ਼-ਬਿਲਡ-ਟੂਲਜ਼` ਐਨ ਪੀ ਐਮ ਮੋਡੂਲ (ਹੇਠਾਂ ਦੇਖੋ) ਦੁਆਰਾ ਆਪਣੇ ਆਪ ਸਥਾਪਤ ਕਿਤੀ ਜਾਵੇਗੀ 
+
+* ਤੁਹਾਡੇ ਪਲੇਟਫਾਰਮ ਲਈ ਇੱਕ ਸੀ / ਸੀ ++ ਕੰਪਾਈਲਰ ਟੂਲ ਚੇਨ:
+  
+  ... ਵਿੰਡੋਜ਼
+    *** ਪ੍ਰਸ਼ਾਸਕ ਦੇ ਤੌਰ ਤੇ ਪਾਵਰਸ਼ੇਲ ਸ਼ੁਰੂ ਕਰੋ ।
+    *** ਇਹ ਕਮਾਂਡ ਚਲਾਓ `npm install --global windows-build-tools --vs2015`. (`--Debug` ਫਲੈਗ ਅਜ਼ਮਾਓ ਜਾਂ https://github.com/felixrieseberg/windows-build-tools[ਵਿੰਡੋਜ਼-ਬਿਲਡ-ਟੂਲਜ਼] ਚੈੱਕ ਕਰੋ ਜੇ ਤੁਹਾਨੂੰ ਕੋਈ ਸਮੱਸਿਆ ਆਉਂਦੀ ਹੈ ।)
+    *** ਹੁਣ ਅਪਨਾ ਕੰਪਿਊਟਰ ਮੁੜ ਚਾਲੂ ਕਰੋ ।
++
+WARNING: ਇਹ ਸੁਨਿਸ਼ਚਿਤ ਕਰੋ ਕਿ ਤੁਹਾਡੇ ਪ੍ਰੋਫਾਈਲ ਮਾਰਗ ਵਿੱਚ ਸਿਰਫ ASCII ਅੱਖਰ ਹਨ, ਨਹੀਂ ਤਾਂ ਇਹ ਨੋਡ-ਜਿਪ ਵਰਤੋਂ ਦੀਆਂ ਸਮੱਸਿਆਵਾਂ ਦਾ ਕਾਰਨ ਬਣ ਸਕਦਾ ਹੈ । (https://github.com/nodejs/node-gyp/issues/297[nodejs/node-gyp issue #297])
++
+NOTE: ਜੇ ਤੁਹਾਡੇ ਕੋਲ ਵਿਜ਼ੂਅਲ ਸਟੂਡੀਓ ੨੦੧੯ ਸਥਾਪਤ ਹੈ, ਤਾਂ ਤੁਹਾਨੂੰ ਮੁਸ਼ਕਲਾਂ ਦਾ ਸਾਹਮਣਾ ਕਰਨਾ ਪੈ ਸਕਦਾ ਹੈ ਜਦੋਂ `ਨੋਡ-ਜੀ ਵਾਏ ਪੀ` ਦੇ ਮੂਲ ਸੰਸਕਰਣ ਦੀ ਵਰਤੋਂ ਕਿਤੀ ਜਾਵੇ । ਤੁਹਾਨੂੰ https://github.com/nodejs/node-gyp/issues/1747[nodejs/node-gyp issue #1747] ਹੱਲਾਂ ਦੀ ਪਾਲਣਾ ਕਰਨ ਦੀ ਜ਼ਰੂਰਤ ਹੋ ਸਕਦੀ ਹੈ । 
+  
+
+  ... ਮੈਕ ਓ ਐਸ
+    *** https://developer.apple.com/xcode/downloads/[ਐਕਸਕੋਡ] ਕਮਾਂਡ ਲਾਈਨ ਟੂਲਸ ਦੀ ਵਰਤੋਂ ਕਰ, ਜਿਸ ਵਿੱਚ `gcc` ਹੈ ਅਤੇ ਸੰਬੰਧਿਤ ਟੂਲ-ਚੇਨ, ਜਿਸ ਵਿੱਚ `ਮੇਕੇ` ਹੈ, ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ ।
+    *** ਟਰਮੀਨਲ ਖੋਲ੍ਹੋ ਅਤੇ ਇਹ ਕਮਾਂਡ ਚਲਾਓ `xcode-select --install`.
+  
+
+  ... Linux
+    *** `make`, `pkg-config`, GCC ਜਾਂ ਕੋਈ ਹੋਰ ਕੰਪਾਈਲ ਟੂਲ-ਚੇਨ
+    *** ਪੈਕੇਜ ਬਣਤਰ ਦੀ ਜਾਂਚ ਨਹੀਂ ਕੀਤੀ ਗਈ ਹੈ, ਇਸ ਲਈ ਜ਼ਰੂਰਤਾਂ ਅਣਜਾਣ ਹਨ ।
+    
+====
+
+
+### ਬਣਤਰ
+
+ਸਾਰੀਆਂ ਨਿਰਭਰਤਾਵਾਂ ਨੂੰ ਸਥਾਪਿਤ ਕਰੋ ਅਤੇ ਬਣਾਓ:
+
+[source,shell]
+----
+cd desktop
+npm i <1>
+----
+<1> ਫਰੰਟੈਂਡ ਅਤੇ ਬੈਕਐਂਡ ਲਈ ਨਿਰਭਰਤਾ ਸਥਾਪਿਤ ਕਰਦਾ ਹੈ ।
+
+### ਸ਼ੁਰੂ ਕਰੋ
+
+ਵਿਕਾਸ ਸਰਵਰ ਚਾਲੂ ਕਰਨ ਲਈ, ਇਹ ਕਮਾਂਡ ਚਲਾਓ `npm start`, ਜੋ ਕਿ ਫਰੰਟੈਂਡ ਸਰਵਰ ਨੂੰ ਚਾਲੂ ਕਰੇਗਾ https://localhost:3000[ਪੋਰਟ `੩੦੦੦`], ਅਤੇ ਇੱਕ ਬੈਕਐਂਡ ਸਰਵਰ https://localhost:42425[ਪੋਰਟ `੪੨੪੨੫`] । ਬੈਕਐਂਡ ਵਿਚਲੀਆਂ ਕੋਈ ਤਬਦੀਲੀਆਂ ਸਰਵਰ ਦੇ ਮੁੜ ਚਾਲੂ ਹੋਣ ਦੇ ਨਤੀਜੇ ਵਜੋਂ ਹੋਣਗੀਆਂ । ਮੈਨੂਅਲ ਰੀਸਟਾਰਟ ਟਰਮੀਨਲ ਵਿੱਚ `rs` ਦੇ ਕੇ ਗਤੀਸ਼ੀਲ ਕੀਤਾ ਜਾ ਸਕਦਾ ਹੈ ।
+
+ਬੰਡਲ ਦਾ ਟ੍ਰੀ-ਮੈਪ ਤਿਆਰ ਕਰਨ ਲਈ ਅਤੇ ਸੰਭਾਵਤ ਬੰਡਲ ਨੂੰ ਵੇਖਣ ਲਈ, ਘੱਟੋ ਘੱਟ ਇਕ ਵਾਰ `npm run build` ਚਲਾਓ ਅਤੇ ਫਿਰ `npm run analyze` ।
+
+### ਗਠੜੀ
+
+ਇਲੈਕਟ੍ਰੋਨ-ਬਿਲਡਰ ਬਾਈਨਰੀ ਤਿਆਰ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ । ਇਸ ਕਮਾਂਡ ਰਾਹੀਂ `npm run pack` ਤੁਹਾਡੇ ਪਲੇਟਫਾਰਮ ਦੀ ਬਾਇਨਰੀਜ ਟੈਸਟ ਕੀਤੀਆਂ ਜਾ ਸਕਦੀਆਂ ਹਨ, ਅਤੇ `npm run dist` ਇੰਸਟੌਲਰ ਬਨਾਯਾ ਜਾ ਸਕਦਾ ਹੈ । ਕਮਾਂਡਾਂ ਦੀ ਪੂਰੀ ਸੂਚੀ ਲਈ ਇਹ ਕਮਾਂਡ ਚਲਾਓ `npm run` ਜਾਂ `package.json` ਦੇਖੋ । ਪ੍ਰੋਡਕਸ਼ਨ ਬਿਲਡ ਇਕ ਫਰੰਟੈਂਡ ਸਰਵਰ ਪੋਰਟ `੧੬੯੯` ਅਤੇ ਬੈਕਐਂਡ ਸਰਵਰ ਪੋਰਟ `੪੨੪੨੫` ਚਾਲੂ ਕਰਦਾ ਹੈ ।
+
+
+### ਸੰਖੇਪ ਜਾਣਕਾਰੀ
+
+`app` ਫੋਲਡਰ ਵਿੱਚ ਇਲੈਕਟ੍ਰੋਨ ਰੈਪਰ, ਬੈਕਐਂਡ ਨੋਡ ਐਪਲੀਕੇਸ਼ਨ, ਅਤੇ ਫਰੰਟੈਂਡ ਰੀਐਕਟ ਐਪਲੀਕੇਸ਼ਨ ਹੈ ।
+
+ਫਰੰਟ-ਏਂਡ `create-react-app`, ਗ੍ਰਾਹਕਾਂ ਨੂੰ ਸਿੰਕ੍ਰੋਨਾਈਜ਼ ਕਰਨ ਲਈ ਵੈਬਸਾਈਟਸ ਅਤੇ ਖੋਜ ਲਈ ਏ ਪੀ ਆਈ ਦੀ ਵਰਤੋਂ ਕਰ ਰਿਹਾ ਹੈ ।
+
+ਬੈਕਐਂਡ ਪ੍ਰਸਤਾਵਿਤ ES+ ਮੋਡੂਲਸ ਨੂੰ `esm` ਸ਼ਿਮ ਮੋਡੂਲ ਨਾਲ ਵਰਤ ਰਿਹਾ ਹੈ ।
+
+
+## ਵਰਕਫਲੋ
+
+ਵਿਕਾਸ ਦਾ ਸਧਾਰਣ ਵਰਕਫਲੋ ਕੰਮ ਕਰਨ ਲਈ ਇੱਕ ਮੁੱਦੇ ਦੀ ਚੋਣ ਕਰਨਾ, `dev` ਬ੍ਰਾਂਚ ਤੋਂ ਇੱਕ ਵਿਸ਼ੇਸ਼ਤਾ ਸ਼ਾਖਾ ਬਣਾਉਣਾ, ਅਤੇ ਇੱਕ ਪੁਚ ਬੇਨਤੀ ਜਮ੍ਹਾਂ ਕਰਨਾ ਹੈ । ਇਹ ਮਾਡਲ ਸ਼ਬਦ ਓਐਸ ਸੰਗਠਨ ਵਿੱਚ ਸਾਰੇ ਰਿਪੋਜ਼ਟਰੀ ਵਿੱਚ ਸਾਂਝਾ ਹੈ ।
+
+IMPORTANT: ਕਿਰਪਾ ਕਰਕੇ ਵਰਕਫਲੋ ਲਈ ਸਾਂਝੇ ਦਸਤਾਵੇਜ਼ ਵੇਖੋ (ਮੁੱਦਾ ਟਰੈਕਿੰਗ, ਬ੍ਰਾਂਚਿੰਗ, ਅਤੇ ਪੁੱਲ ਬੇਨਤੀਆਂ ਜਾਰੀ ਕਰਨ ਲਈ ) link:https://github.com/ShabadOS/.github/wiki/How-to-Contribute#workflow[ਯੋਗਦਾਨ ਕਿਵੇਂ ਪਾਉਣਾ ਹੈ] ।
+
+
+## Coding Guidelines
+
+ਸਾਡੇ ਕੋਡਿੰਗ ਦਿਸ਼ਾ ਨਿਰਦੇਸ਼ ਵੀ (ਜਿਆਦਾਤਰ) ਸ਼ਬਦ ਓਐਸ ਸੰਗਠਨ ਵਿੱਚ ਸਾਰੀ ਰੈਪੋਸੀਟੋਰੀਆਂ ਵਿੱਚ ਸਾਂਝੇ ਕੀਤੇ ਗਏ ਹਨ । ਸਕੋਪ ਪਰਿਭਾਸ਼ਾਵਾਂ ਤੋਂ ਇਲਾਵਾ (ਜੋ ਰੈਪੋਸੀਟੋਰੀ ਵਿਸ਼ੇਸ਼ ਹਨ), ਬਾਕੀ ਦਾ ਹਵਾਲਾ ਵਿਕੀ ਲੇਖ ਵਿੱਚ ਦਿੱਤਾ ਜਾਣਾ ਚਾਹੀਦਾ ਹੈ ।
+
+IMPORTANT: ਕਿਰਪਾ ਕਰਕੇ ਕੋਡਿੰਗ ਦਿਸ਼ਾ ਨਿਰਦੇਸ਼ਾਂ ਲਈ ਸਾਂਝੇ ਕੀਤੇ ਦਸਤਾਵੇਜ਼ ਵੇਖੋ (ਨਾਮ, ਟਿੱਪਣੀਆਂ, ਸ਼ੈਲੀ, ਲਿਨਟਿੰਗ, ਅਤੇ ਵਚਨਬੱਧ ਸੰਦੇਸ਼) link:https://github.com/ShabadOS/.github/wiki/How-to-Contribute#coding-guidelines[ਯੋਗਦਾਨ ਕਿਵੇਂ ਪਾਉਣਾ ਹੈ] ।
+
+
+### ਸਕੋਪ (link:https://github.com/ShabadOS/.github/wiki/How-to-Contribute#commit-messages[ਵਚਨਬੱਧ ਸੰਦੇਸ਼] ਦਾ ਹਿੱਸਾ ਹੈ)
+
+The scope should be the name of the npm package affected (as perceived by the person reading the changelog generated from commit messages). These are the supported scopes in Desktop:
+
+- **backend**
+- **frontend/controller**
+- **frontend/overlay**
+- **frontend/presenter**
+- **frontend/settings**
+
+There are currently a few exceptions to the "use package name" rule:
+
+- *packaging*: used for changes to the npm package layout in all of our packages, e.g. public path changes, package.json changes done to all packages, d.ts file/format changes, changes to bundles, etc.
+- *changelog*: used for updating the release notes in CHANGELOG.md
+- *none/empty string*: useful for `style`, `test`, and `refactor` changes that are done across all packages (e.g. style: add missing semicolons) and for docs changes that are not related to a specific package (e.g. docs: fix typo in tutorial).
+
+## ਤੁਹਾਡਾ ਧੰਨਵਾਦ!
+
+ਵੱਡੇ ਜਾਂ ਛੋਟੇ ਓਪਨ ਸੋਰਸ ਪ੍ਰੋਜੈਕਟ ਵਿੱਚ ਯੋਗਦਾਨ ਕਰਨ ਨਾਲ ਇਸ ਵਰਗੇ ਵਧੀਆ ਪ੍ਰੋਜੈਕਟ ਬਨਦੇ ਹਨ । ਇਸ ਪ੍ਰੋਜੈਕਟ ਵਿਚ ਸਮਾਂ ਕੱਢ ਹਿੱਸਾ ਲੈਣ ਲਈ ਤੁਹਾਡਾ ਧੰਨਵਾਦ ।
+
+
