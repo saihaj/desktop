@@ -1,6 +1,6 @@
 {
   "name": "@shabados/desktop",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Electron wrapper around Shabad OS backend and frontend",
   "main": "app/electron/esm-wrapper.js",
   "scripts": {
