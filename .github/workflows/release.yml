@@ -1,0 +1,36 @@
+name: Continuous Deployment
+
+on:
+  push:
+    branches: [test-gh-workflows]
+
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Generate Changelog
+        id: changelog
+        run: |
+            echo "::set-output name=result::$(npx conventional-changelog-cli -p angular -u -r)"
+
+      - name: Extract tag name
+        id: tag
+        with:
+            path: "./app/package.json"
+        uses: tyankatsu0105/read-package-version-actions@v1
+
+      - name: Create Release
+        uses: actions/create-release@latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
+        with:
+          tag_name: ${{ steps.tag.outputs.version }}
+          release_name: ${{ steps.tag.outputs.version }}
+          body: |
+              ${{ steps.changelog.outputs.result }}
+          draft: true
+          prerelease: false
