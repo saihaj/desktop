@@ -15,4 +15,4 @@ fi
 
 RELEASE_COUNT=$(($RELEASE_COUNT + 1))
 
-conventional-changelog -p angular -u -r $RELEASE_COUNT
+npx conventional-changelog-cli -p angular -u -r $RELEASE_COUNT
